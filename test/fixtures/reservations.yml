@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  startdate: 2022-03-21
+  enddate: 2022-03-21
+  room_id: 1
+  human: 1
+  user_id: 1
+  totalprice: 1
+  usedate: 1
+  price: 1
+
+two:
+  startdate: 2022-03-21
+  enddate: 2022-03-21
+  room_id: 1
+  human: 1
+  user_id: 1
+  totalprice: 1
+  usedate: 1
+  price: 1
