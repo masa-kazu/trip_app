@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  #get 'users/index'
   #get 'rooms/index'
   #get 'reservations/index'
   #devise_for :users
