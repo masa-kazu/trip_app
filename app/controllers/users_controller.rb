@@ -19,7 +19,6 @@ class UsersController < ApplicationController
    
    def update
     @user = current_user
-    @user.update(user_params)
     @user.update(profileimage: nil) if params[:image_delete].present? # 画像なしの場合に既存画像削除
     if @user.update(user_params)
      flash[:notice] = "ユーザー情報を更新しました"
@@ -30,7 +29,7 @@ class UsersController < ApplicationController
    end
    
    def user_params
-    params.require(:user).permit(:name, :email, :profile, :profileimage, :encrypted_password)
+    params.require(:user).permit(:name, :profile, :profileimage)
    end
    
    def move_to_signed_in
