@@ -17,8 +17,10 @@
 
   <body>
     <%= render 'shared/header' %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <main class="main"> 
+   <% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+ <% end %>
     <%= yield %>
     <%= render 'shared/footer' %>
   </body>
