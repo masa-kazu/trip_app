@@ -26,10 +26,10 @@
     <%= f.hidden_field :user_id, :value => current_user.id %>
     <%= f.hidden_field :room_id, :value => @reservation.room_id %>
     <tr>
-     <td>□使用日数:<%= (@reservation.enddate - @reservation.startdate).to_int %>日</td>
+     <td>使用日数:<%= (@reservation.enddate - @reservation.startdate).to_int %>日</td>
     </tr>
     <tr>
-     <td><%= f.hidden_field :human, :value => @reservation.human %>□人数:<%= @reservation.human %>人</td>
+     <td><%= f.hidden_field :human, :value => @reservation.human %>人数:<%= @reservation.human %>人</td>
     </tr>
     <tr>
      <td>合計金額<%= f.hidden_field :totalprice, :value => @reservation.totalprice %>

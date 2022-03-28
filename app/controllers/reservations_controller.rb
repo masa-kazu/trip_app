@@ -44,9 +44,11 @@ class ReservationsController < ApplicationController
     redirect_back(fallback_location: root_path)
   end
   
-  def reservation_params
-    params.require(:reservation).permit(:human, :startdate, :enddate, :room_id, :user_id, :price, :totalprice)
-  end
+  private
+  
+    def reservation_params
+      params.require(:reservation).permit(:human, :startdate, :enddate, :room_id, :user_id, :price, :totalprice)
+    end
   
   def move_to_signed_in
     unless user_signed_in?
