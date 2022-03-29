@@ -12,11 +12,11 @@ class Room < ApplicationRecord
                                   greater_than_or_equal_to: 100 }
   validates :roomimage, presence: true
   
-  def self.search(keyword)
+  def self.search_key(keyword)
    where(["roomname like? OR address like? OR roomprofile like?", "%#{keyword}%", "%#{keyword}%", "%#{keyword}%"])
   end
   
-  def self.search(area)
+  def self.search_area(area)
    where(["address like?", "%#{area}%"])
   end
   

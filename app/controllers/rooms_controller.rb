@@ -9,12 +9,12 @@ class RoomsController < ApplicationController
   def search
     @keyword = params[:keyword]
     @area = params[:area]
-    if params[:keyword] != nil
-    @rooms = Room.search(params[:keyword])
-    elsif params[:area] != nil
-    @rooms = Room.search(params[:area])
+    if @keyword != nil
+      @rooms = Room.search_key(params[:keyword])
+    elsif @area != nil
+      @rooms = Room.search_area(params[:area])
     else
-    @rooms = Room.all.order(updated_at: 'ASC')
+      @rooms = Room.all.order(updated_at: 'ASC')
     end
     render "index"
   end
